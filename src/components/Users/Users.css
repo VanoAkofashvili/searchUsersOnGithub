@@ -1,0 +1,14 @@
+/* Users */
+.Users {
+  font-size: 1.7rem;
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+
+  transition: all .2s ease-in-out;
+}
+
+.Users:last-child {
+  margin-bottom: 1.5rem;
+}

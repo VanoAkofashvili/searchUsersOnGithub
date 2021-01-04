@@ -1,0 +1,64 @@
+/* Header */
+.Header {
+  text-transform: capitalize;
+  padding: 1rem 0;
+  line-height: 1.6;
+}
+
+.Title h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  /* font-style: italic; */
+}
+
+.Title h2 {
+  display: none;
+}
+
+/* SearchBar and View Changer */
+
+.SearchAndView {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* Search */
+
+.SearchContainer {
+  display: inline-flex;
+  flex: 1 1;
+  position: relative;
+  border: 1px solid var(--background-color);
+  border-radius: 2rem;
+  padding: 0.4rem 1rem;
+  overflow: hidden;
+}
+
+.SearchIcon {
+  padding: 0.5rem;
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.SearchBox {
+  border: 0;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  outline: none;
+  flex: 1;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  letter-spacing: 1.1px;
+}
+
+.SearchBox:-webkit-autofill,
+.SearchBox:-webkit-autofill:hover,
+.SearchBox:-webkit-autofill:focus,
+.SearchBox:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/* Switch view */
+.SwitchView {
+  display: none;
+}

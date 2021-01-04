@@ -1,0 +1,11 @@
+/* App component */
+.App {
+  background-color: #fff;
+  width: 95vw;
+  max-width: 1200px;
+  margin: 10rem auto;
+  /* margin-top: 10rem; */
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 1rem 1.1rem rgba(0, 0, 0, 0.3);
+}

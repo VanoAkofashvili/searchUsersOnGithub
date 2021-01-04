@@ -1,0 +1,150 @@
+/* Media Quaries */
+
+@media screen and (min-width: 612px) {
+  /* Header */
+  .Title h1 {
+    font-size: 2.3rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .Title h2 {
+    display: block;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+  /* Switch View */
+  .SwitchView {
+    display: flex;
+    align-items: center;
+  }
+  .SwitchView p {
+    margin-right: 0.5rem;
+  }
+  .SwitchView button {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .SwitchView span {
+    font-size: 3rem;
+    color: var(--text-color);
+  }
+  .SearchContainer {
+    max-width: 70%;
+  }
+  /* User */
+  /* List view */
+  .Users.list {
+    grid-template-columns: 1fr;
+  }
+  .Users.list .User {
+    flex-direction: row;
+    align-items: center;
+  }
+  .Users.list .User-info {
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    padding: 0.5rem;
+  }
+  .Users.list p {
+    display: flex;
+    align-items: center;
+  }
+
+  .User p span:not(.icon) {
+    width: 100px;
+  }
+
+  .User p .icon {
+    overflow: visible;
+  }
+
+  
+  /* .Users.list p:not(:first-child) {
+    justify-self: center;
+  }
+  .Users.list p:last-child {
+    justify-self: end;
+  } */
+  .Users.list .User-image,
+  .Users.list .User-image img,
+  .Users.list .User-image::before {
+    width: 60px;
+    height: 60px;
+    margin-top: 0;
+  }
+  .Users.list .User-image::before {
+    top: 1px;
+    left: -2px;
+  }
+  /* Grid view */
+  .Users.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Users.grid .User-image,
+  .Users.grid .User-image img,
+  .Users.grid .User-image::before {
+    width: 120px;
+    height: 120px;
+  }
+
+
+  /* Userpage */
+  .UserProfile {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .Profile_info {
+    text-align: left;
+    margin-left: 3rem;
+    width: 100%;
+  }
+
+  .Organizations {
+    padding-left: 3rem;
+  }
+
+  .Organizations ul li {
+    flex-direction: row;
+    padding: 1.5rem 0;
+  }
+
+  .Organizations img {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* Grid view */
+  .Users.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .User p span:not(.icon) {
+    width: auto;
+  }
+
+  .UserProfile img {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* Grid view */
+  .Users.grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .Title h1 {
+    font-size: 2.5rem;
+  }
+  .Title h2 {
+    font-size: 2rem;
+  }
+}

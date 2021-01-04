@@ -1,0 +1,8 @@
+/* Main */
+
+.Main {
+  width: 100%;
+  margin: 1rem auto;
+  border: 1px solid var(--background-color);
+  border-radius: 2rem;
+}

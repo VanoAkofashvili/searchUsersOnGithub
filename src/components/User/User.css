@@ -1,0 +1,75 @@
+.Users .User {
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  font-weight: 300;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.User:nth-child(odd) {
+  background-color: #fdfdfd;
+}
+
+.User:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.User .User-image {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.User .User-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  z-index: 2;
+  position: relative;
+}
+
+.User-image::before {
+  content: "";
+  width: 150px;
+  height: 150px;
+  background: #0182ff;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  top: -5px;
+  left: 5px;
+}
+
+.User p span {
+  background-color: #0182ff;
+  color: white;
+  margin: 3px;
+  border-radius: 2rem;
+  display: inline-block;
+  padding: 4px;
+  font-size: 1.5rem;
+
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.User .material-icons {
+  font-size: 2.2rem;
+}
+
+.User:hover {
+  box-shadow: 0 0.3rem 1.2rem rgba(106, 106, 106, 0.3);
+}

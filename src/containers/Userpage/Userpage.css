@@ -1,0 +1,57 @@
+.Back {
+  margin-bottom: 1.5rem;
+  padding: .5rem;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.Back button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .1s linear;
+}
+
+.Back span {
+  font-size: 3rem;
+}
+
+.Back button:hover {
+  transform: translateX(4px);
+}
+
+.Back button:active {
+  transform: translateX(0);
+}
+
+/* Profile  */
+.UserProfile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.UserProfile img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  box-shadow: 0 1rem 1.3rem rgba(0, 0, 0, .4);
+  transition: all .3s ease-in-out;
+}
+
+.UserProfile img:hover {
+  transform: scale(1.04) rotate(10deg) translate(2px, 4px);
+}
+
+.Profile_info {
+  margin-top: 1rem;
+  text-align: center;
+  padding: 1rem;
+  line-height: 1.8;
+}
+
+.Profile_info strong {
+  letter-spacing: 1.2px;
+}
