@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 
 import Header from "../../components/Header/Header";
-// import Users from "../../components/Users/Users";
 import User from "../../components/User/User";
 import Error from "../../components/Error/Error";
 
