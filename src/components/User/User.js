@@ -29,14 +29,14 @@ const User = ({ login, avatar_url, repos_url }) => {
         </Link>
       </div>
       <div className="User-info">
-        <p className="flex-col-center">
+        <p>
           <span className="material-icons icon"> account_circle </span>
           <Link to={login}>{login}</Link>
         </p>
-        <p className="flex-col-center">
+        <p>
           <span className="material-icons icon"> military_tech </span> User
         </p>
-        <p className="flex-col-center">
+        <p>
           <span className="material-icons icon"> folder_open </span>
           {repos.length
             ? repos.map((rep) => {
