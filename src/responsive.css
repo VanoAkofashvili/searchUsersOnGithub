@@ -57,7 +57,7 @@
   }
 
   .User p span:not(.icon) {
-    width: 100px;
+    width: auto;
   }
 
   .User p .icon {
@@ -133,6 +133,23 @@
   .UserProfile img {
     width: 170px;
     height: 170px;
+  }
+
+  /* Error */
+  .Error img {
+    width: 230px;
+  }
+
+  .Error span  {
+    font-size: 5rem;
+  }
+
+  .Error p {
+    font-size: 2.3rem;
+  }
+
+  .Error button  {
+    padding: 1rem 2.5rem;
   }
 }
 

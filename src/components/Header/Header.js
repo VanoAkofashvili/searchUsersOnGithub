@@ -1,7 +1,26 @@
 import React from "react";
 import "./Header.css";
 
-const Header = ({ clickHandler }) => {
+const Header = ({ clickHandler, push }) => {
+  const onKeyDownHandler = (e) => {
+    if (e.key === "Enter") {
+      push(`/${e.target.value}`);
+      const localItems = JSON.parse(localStorage.getItem("searched")) || [];
+      localItems.unshift(e.target.value);
+      localStorage.setItem("searched", JSON.stringify(localItems));
+    }
+  };
+
+  let placeHolder = "Search for user...";
+
+  if (localStorage.getItem("searched")) {
+    placeHolder = "";
+    let keywords = JSON.parse(localStorage.getItem("searched"));
+    keywords.slice(0, 3).forEach((name) => {
+      placeHolder += name + " ";
+    });
+  }
+
   return (
     <header className="Header">
       <div className="Title">
@@ -15,9 +34,10 @@ const Header = ({ clickHandler }) => {
           <span className="material-icons SearchIcon">search</span>
           <input
             type="text"
-            placeholder="Search for user..."
+            placeholder={placeHolder}
             className="SearchBox"
             name="search"
+            onKeyDown={onKeyDownHandler}
           />
         </div>
         <div className="SwitchView">

@@ -1,0 +1,41 @@
+.Error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30rem;
+  margin-bottom: 3rem;
+}
+
+.Error img {
+  width: 150px;
+}
+
+.Error span {
+  display: block;
+  color: var(--text-blue-color);
+  font-size: 3.7rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+
+}
+
+.Error p {
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+.Error button {
+  margin-top: 3rem;
+  border: none;
+  background-color: var(--text-blue-color);
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: .5rem 1.8rem;
+  border-radius: 2rem;
+  outline: none;
+  font-size: 1.8rem;
+
+  cursor: pointer;
+}

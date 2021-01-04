@@ -1,35 +1,44 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import "./Userpage.css";
 
 import Profile from "../../components/Profile/Profile";
 import Organizations from "../../components/Organizations/Organizations";
 import Spinner from "../../components/Spinner/Spinner";
+import Back from "../../components/Back/Back";
+import Error from "../../components/Error/Error";
 
 const Userpage = ({ match }) => {
   const [user, setUser] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${match.params.username}`)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(response.status + "Failed Fetch");
+        } else {
+          return response.json();
+        }
+      })
       .then((data) => {
         setUser(data);
         setIsLoading(false);
+      })
+      .catch((error) => {
+        setIsError(true);
+        setIsLoading(false);
+        console.log(error);
       });
   }, [match.params.username]);
 
-  console.log(user);
+  if (isError) {
+    return <Error message="User not found" goBack={true} />;
+  }
   return (
     <>
-      <div className="Back">
-        <Link to="/">
-          <button>
-            <span className="material-icons"> arrow_back </span>
-          </button>
-        </Link>
-      </div>
+      <Back />
       <div className={isLoading ? "flex-row-center" : ""}>
         {isLoading ? (
           <Spinner />

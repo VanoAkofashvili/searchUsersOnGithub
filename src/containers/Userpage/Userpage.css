@@ -1,29 +1,3 @@
-.Back {
-  margin-bottom: 1.5rem;
-  padding: .5rem;
-  border-bottom: 1px solid #f9f9f9;
-}
-
-.Back button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: all .1s linear;
-}
-
-.Back span {
-  font-size: 3rem;
-}
-
-.Back button:hover {
-  transform: translateX(4px);
-}
-
-.Back button:active {
-  transform: translateX(0);
-}
-
 /* Profile  */
 .UserProfile{
   display: flex;

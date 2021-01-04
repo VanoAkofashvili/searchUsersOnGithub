@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Profile = ({ user }) => {
   const [repos, setRepos] = useState([]);
-  console.log(user);
+
   useEffect(() => {
     fetch(user.repos_url)
       .then((response) => response.json())
@@ -22,13 +22,19 @@ const Profile = ({ user }) => {
       <img src={user.avatar_url} alt="avatar" />
       <div className="Profile_info">
         <p>
-          <strong>Name:</strong> {user.name}
+          <strong>Name:</strong>{" "}
+          <a href={user.html_url} target="_blank" rel="noreferrer">
+            {user.name || "Not specified"}
+          </a>
         </p>
         <p>
           <strong>Type:</strong> {user.type}
         </p>
         <p>
-          <strong>Username:</strong> {user.login}
+          <strong>Username:</strong>{" "}
+          <a href={user.html_url} target="_blank" rel="noreferrer">
+            {user.login}
+          </a>
         </p>
         <p>
           <strong>Following:</strong> {user.following}
@@ -38,11 +44,11 @@ const Profile = ({ user }) => {
         </p>
 
         <p>
-          <strong>Location:</strong> {user.location}
+          <strong>Location:</strong> {user.location || "Not specified"}
         </p>
 
         <p>
-          <strong>Company:</strong> {user.company}
+          <strong>Company:</strong> {user.company || "Not specified"}
         </p>
 
         <p>
