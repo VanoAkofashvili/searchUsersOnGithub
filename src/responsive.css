@@ -51,10 +51,6 @@
 
     padding: 0.5rem;
   }
-  .Users.list p {
-    display: flex;
-    align-items: center;
-  }
 
   .User p span:not(.icon) {
     width: auto;

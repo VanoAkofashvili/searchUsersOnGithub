@@ -72,6 +72,11 @@ body {
   justify-content: center !important;
 }
 
+.flex-col-center {
+  display: flex;
+  align-items: center;
+}
+
 .mv-20 {
   margin-top: 2rem;
 }
