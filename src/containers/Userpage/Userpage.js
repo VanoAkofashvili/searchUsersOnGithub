@@ -29,7 +29,6 @@ const Userpage = ({ match }) => {
       .catch((error) => {
         setIsError(true);
         setIsLoading(false);
-        console.log(error);
       });
   }, [match.params.username]);
 
