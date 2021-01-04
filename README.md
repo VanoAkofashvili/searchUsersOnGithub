@@ -1,6 +1,6 @@
 ## Available Scripts
 
-First of all run `npm install` to install all dependencies
+First of all, run `npm install` to install all dependencies
 
 In the project directory, you can run:
 
