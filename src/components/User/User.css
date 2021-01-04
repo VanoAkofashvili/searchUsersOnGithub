@@ -1,3 +1,18 @@
+/* Users */
+.Users {
+  font-size: 1.7rem;
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+
+  transition: all .2s ease-in-out;
+}
+
+.Users:last-child {
+  margin-bottom: 1.5rem;
+}
+
 .Users .User {
   padding: 0.5rem 1rem;
   color: var(--text-color);
@@ -15,7 +30,7 @@
 }
 
 .User:nth-child(even) {
-  background-color: #fafafa;
+  background-color: #f6f6f6;
 }
 
 .User .User-image {

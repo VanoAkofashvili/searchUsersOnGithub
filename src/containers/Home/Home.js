@@ -3,7 +3,8 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 
 import Header from "../../components/Header/Header";
-import Users from "../../components/Users/Users";
+// import Users from "../../components/Users/Users";
+import User from "../../components/User/User";
 import Error from "../../components/Error/Error";
 
 import Spinner from "../../components/Spinner/Spinner";
@@ -61,7 +62,9 @@ const Home = (props) => {
           <Spinner />
         ) : (
           <section className="Users list" ref={viewRef}>
-            <Users users={users} />
+            {users.map((user) => {
+              return <User key={user.id} {...user} />;
+            })}
           </section>
         )}
       </main>
