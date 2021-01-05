@@ -5,7 +5,9 @@ const Header = ({ clickHandler, push }) => {
   const onKeyDownHandler = (e) => {
     if (e.key === "Enter") {
       push(`/${e.target.value}`);
-      const localItems = JSON.parse(localStorage.getItem("searched")) || [];
+      const localItems = (
+        JSON.parse(localStorage.getItem("searched")) || []
+      ).slice(0, 2);
       localItems.unshift(e.target.value);
       localStorage.setItem("searched", JSON.stringify(localItems));
     }
@@ -17,7 +19,7 @@ const Header = ({ clickHandler, push }) => {
   if (localStorage.getItem("searched")) {
     placeHolder = "";
     let keywords = JSON.parse(localStorage.getItem("searched"));
-    keywords.slice(0, 3).forEach((name) => {
+    keywords.forEach((name) => {
       placeHolder += name + " ";
     });
   }
