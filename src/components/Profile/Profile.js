@@ -8,6 +8,7 @@ const Profile = ({ user }) => {
       .then((response) => response.json())
       .then((data) => {
         setRepos(() =>
+          // only three first repo names
           data.slice(0, 3).map((rep, i) => (
             <span key={i} className="span">
               {rep.name}

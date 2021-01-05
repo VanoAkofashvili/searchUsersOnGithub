@@ -13,6 +13,7 @@ const Header = ({ clickHandler, push }) => {
 
   let placeHolder = "Search for user...";
 
+  // get "searched"'s value from localStorage if it exists
   if (localStorage.getItem("searched")) {
     placeHolder = "";
     let keywords = JSON.parse(localStorage.getItem("searched"));

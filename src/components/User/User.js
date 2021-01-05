@@ -11,7 +11,7 @@ const User = ({ login, avatar_url, repos_url }) => {
     const getRepositories = async () => {
       const repos = await fetch(`${repos_url}?page=1`);
       const reposData = await repos.json();
-      // update state if component is mounted
+      // update state if and only if component is mounted
       if (isMounted) setRepos(reposData.slice(0, 3));
     };
     getRepositories();

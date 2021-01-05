@@ -8,6 +8,9 @@ import Error from "../../components/Error/Error";
 
 import Spinner from "../../components/Spinner/Spinner";
 
+const url =
+  "https://api.github.com/search/users?q=followers%3A%3E%3D1000&fbclid=IwAR0ryyY0EhTy4m3clroDyFceu4S3QDoZUDZt811xsqXOAPZaMAWZamJiz90&per_page=20";
+
 const Home = (props) => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -18,9 +21,7 @@ const Home = (props) => {
 
   const getUsers = async () => {
     try {
-      const response = await fetch(
-        "https://api.github.com/search/users?q=repos:%3E50+followers:%3E1000&per_page=20"
-      );
+      const response = await fetch(url);
 
       if (!response.ok) {
         throw new Error(response.status + "Failed Fetch");
@@ -35,10 +36,12 @@ const Home = (props) => {
     }
   };
 
+  // get users after component did mount
   useEffect(() => {
     getUsers();
   }, []);
 
+  // Switch view
   const clickHandler = () => {
     if (viewRef.current.classList.contains("grid")) {
       viewRef.current.classList.remove("grid");
@@ -49,6 +52,7 @@ const Home = (props) => {
     }
   };
 
+  // if there is an error
   if (isError) {
     return <Error message="Something went wrong" goBack={false} />;
   }
